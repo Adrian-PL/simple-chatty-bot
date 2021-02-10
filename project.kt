@@ -36,10 +36,15 @@ fun count() {
 }
 
 fun test() {
+   println("Why do we use methods?\n" +
+            "1. To repeat a statement multiple times.\n" +
+            "2. To decompose a program into several small subroutines.\n" +
+            "3. To determine the execution time of a program.\n" +
+            "4. To interrupt the execution of a program.")
     val d = scanner.nextInt()
-    if (d != 2) {
+    while (d != 2) {
         println("Please, try again.")
-        test()
+        d = scanner.nextInt()
     }
 }
 
@@ -53,11 +58,6 @@ fun main() {
     guessAge()
     count()
     println("Let's test your programming knowledge.")
-    println("Why do we use methods?\n" +
-            "1. To repeat a statement multiple times.\n" +
-            "2. To decompose a program into several small subroutines.\n" +
-            "3. To determine the execution time of a program.\n" +
-            "4. To interrupt the execution of a program.")
     test()
     end()
 }
