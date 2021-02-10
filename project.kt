@@ -36,6 +36,7 @@ fun count() {
 }
 
 fun test() {
+   println("Let's test your programming knowledge.")
    println("Why do we use methods?\n" +
             "1. To repeat a statement multiple times.\n" +
             "2. To decompose a program into several small subroutines.\n" +
@@ -57,7 +58,6 @@ fun main() {
     remindName()
     guessAge()
     count()
-    println("Let's test your programming knowledge.")
     test()
     end()
 }
