@@ -2,50 +2,45 @@ package bot
 
 import java.util.*
 
-
 val scanner = Scanner(System.`in`)
 
 fun greet(assistantName: String, birthYear: String) {
-    println("Hello! My name is " + assistantName + ".")
-    println("I was created in " + birthYear + ".")
+    println("Hello! My name is $assistantName.")
+    println("I was created in $birthYear.")
     println("Please, remind me your name.")
 }
 
 fun remindName() {
-    val name = scanner.nextLine()
-    println("What a great name you have, " + name + "!")
+    println("What a great name you have, ${scanner.next()}!")
 }
 
 fun guessAge() {
     println("Let me guess your age.")
     println("Say me remainders of dividing your age by 3, 5 and 7.")
-    val rem3 = scanner.nextInt()
-    val rem5 = scanner.nextInt()
-    val rem7 = scanner.nextInt()
-    val age = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105
-    println("Your age is " + age + "; that's a good time to start programming!")
+    val age = (scanner.nextInt() * 70 + scanner.nextInt() * 21 + scanner.nextInt() * 15) % 105
+    println("Your age is $age; that's a good time to start programming!")
 }
 
 fun count() {
     println("Now I will prove to you that I can count to any number you want.")
-    val num = scanner.nextInt()
-    for (i in 0..num) {
+    for (i in 0..scanner.nextInt()) {
         print(i)
         println("!")
     }
 }
 
 fun test() {
-   println("Let's test your programming knowledge.")
-   println("Why do we use methods?\n" +
+    println("Let's test your programming knowledge.")
+    println("Why do we use methods?\n" +
             "1. To repeat a statement multiple times.\n" +
             "2. To decompose a program into several small subroutines.\n" +
             "3. To determine the execution time of a program.\n" +
             "4. To interrupt the execution of a program.")
-    val d = scanner.nextInt()
-    while (d != 2) {
+    while (true) {
+        if (scanner.nextInt() == 2) {
+            break
+        }
         println("Please, try again.")
-        d = scanner.nextInt()
     }
 }
 
